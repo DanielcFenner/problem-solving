@@ -4,18 +4,12 @@ function XO(str) {
 
   // count x's and o's in string
   for (let i = 0; i < str.length; i++) {
-    letter = str[i];
-    if (letter === "X" || letter === "x") {
-      exes++;
-    } else if (letter === "o" || letter === "O") {
-      ohs++;
-    }
+    letter = str[i].toLowerCase();
+    if (letter === "x") exes++;
+    else if (letter === "o") ohs++;
   }
 
   // true if there are the same amount of x's and o's
-  if (exes === ohs) {
-    return true;
-  } else {
-    return false;
-  }
+  if (exes === ohs) return true;
+  else return false;
 }
