@@ -9,4 +9,4 @@ function isTriangle(a,b,c)
    }
 }
 
-isTriangle(5, 10, 9)
+isTriangle(5, 10, 9)                                                                
