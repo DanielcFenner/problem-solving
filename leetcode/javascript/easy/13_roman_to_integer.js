@@ -30,7 +30,6 @@
         } else {
             sum += el
         }
-        console.log(sum)
     }
 
     return sum

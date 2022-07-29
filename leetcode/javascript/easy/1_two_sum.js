@@ -29,7 +29,7 @@ let twoSumTwo = function(nums, target) {
 
     for (let i = 0; i < nums.length; i++) {
         const element = nums[i];
-        if (diffObj[element] !== undefined) return [diffObj[element], i]
+        if (diffObj[element] !== i && (element in diffObj)) return [diffObj[element], i]
         
     }
 }

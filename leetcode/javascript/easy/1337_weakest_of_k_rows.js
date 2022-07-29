@@ -5,8 +5,8 @@
  */
  var kWeakestRows = function(mat, k) {
     let weakestArr = []
-    let smallest = mat[0]
 
+    // fill weakestArr with the sum of the mat row and the row index
     for (let i = 0; i < mat.length; i++) {
         const row = mat[i];
         let sum = 0
@@ -18,10 +18,11 @@
         weakestArr.push([sum, i])   
     }
 
+    // sort the weakest array by their sum values
     weakestArr.sort((a, b) => a[0] - b[0])
 
+    // fill new weakest arr with the sorted values and requested amount
     let newWeakestArr = []
-
     for (let i = 0; i < k; i++) {
         newWeakestArr.push(weakestArr[i][1])
     }
@@ -29,5 +30,3 @@
     return newWeakestArr
 };
 
-console.log(kWeakestRows([[1,1,0,0,0],[1,1,1,1,0],[1,0,0,0,0],[1,1,0,0,0],[1,1,1,1,1]]
-, 3))
