@@ -77,10 +77,10 @@ function merge(nums1, m, nums2, n) {
     const nums2El = nums2[nums2Index];
 
     if ((nums1El < nums2El && nums1Index < m) || nums2Index === n) {
-      InsertAndShift(nums1, i, nums1El);
+      nums1[i] = nums1El;
       nums1Index++;
     } else if (nums2Index < n) {
-      InsertAndShift(nums1, i, nums2El);
+      nums1[i] = nums2El;
       nums2Index++;
     }
   }
